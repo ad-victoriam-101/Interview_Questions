@@ -7,19 +7,22 @@ def fill_array():
     for number in range(101):
         test_array.append(number)
 def array_pop():
-    #generates a random index and pops it out of test_array
+    #generates a random index and inserts it in test_array
     for x in range(1):
         random_int = random.randint(1,101)
         print(random_int)
         test_array.insert(random_int,random_int)
-def missing_number(test_arrays):
-    #this is a guassian formula that is implemented in python to find the missing number. 
-    n = len(test_arrays)
-    total = ((n)*(n+1))/2
-    sum_of_array = sum(test_arrays)
-    missing = total - sum_of_array
-    print("the missing number is:",missing)
+
+def print_repeating(array,size_of_array):
+    #takes an array and the size of said array to find the duplicate number. 
+    for i in range(0,size_of_array):
+        if array[i] == array[i-1]:
+            print("The Repeating number is: ",array[i])
+
 fill_array()
 array_pop()
+array_length = len(test_array)
 print(test_array)
+print(array_length)
+print_repeating(test_array,array_length)
 #missing_number(test_array)
