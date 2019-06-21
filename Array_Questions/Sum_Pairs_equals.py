@@ -20,8 +20,8 @@ def sum_pairs_func(arr,target_sum):
 
 
 
-
 fill_array()
 print(sum_pairs_func(test_array,target_sum))
 print(numbers_sum)
 print(test_array)
+
