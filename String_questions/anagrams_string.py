@@ -15,3 +15,20 @@ def test_anagram(word_one,word_two):
             print("the words aren't anagrams")
 
 test_anagram(anagram_1,anagram_2)
+
+#found a better way todo this online. the faster way is. 
+
+# function to check if two strings are 
+# anagram or not  
+def check(s1, s2): 
+      
+    # the sorted strings are checked using python built in sort method which returns a sorted list that doesn't effect the orinal. 
+    if(sorted(s1)== sorted(s2)): 
+        print("The strings are anagrams.")  
+    else: 
+        print("The strings aren't anagrams.")          
+          
+# driver code   
+s1 ="listen"
+s2 ="silent" 
+check(s1, s2) 
