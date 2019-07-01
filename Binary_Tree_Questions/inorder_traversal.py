@@ -1,0 +1,1 @@
+#given a binary tree. preform preorder
