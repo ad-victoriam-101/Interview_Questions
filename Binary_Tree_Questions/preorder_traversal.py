@@ -2,6 +2,8 @@
 #remember binary trees can only have 2 leaves max. 2-0 is a perfect tree. 
 #for preorder the traversal is as follows (Root, Left Right.)
 #algorithem preorder visit the root. traverse left side, Traverse right side. 
+import random
+
 class Node:
 
     def __init__(self, data):
@@ -44,12 +46,17 @@ class Node:
             res = res + self.inorderTraversal(root.right)
         return res
 #Preorder Traversal
+# Root -> Left -> Right
+    def preorder_traversal(self,root):
+        res = []
+        if root:
+            res.append(root.data)
+            res = res + self.preorder_traversal(root.left)
+            res = res + self.preorder_traversal(root.right)
+        return res
 
 root = Node(27)
-root.insert(14)
-root.insert(35)
-root.insert(10)
-root.insert(19)
-root.insert(31)
-root.insert(42)
+for i in range(10):
+    root.insert(random.randint(1,101))
 print(root.inorderTraversal(root))
+print(root.preorder_traversal(root))
