@@ -8,11 +8,12 @@ for i in range(101):
 print(test_array)
 
 def bubble_sort(test_list):
-    for passnum in range(len(test_list)-1,0,1):
+    for passnum in range(len(test_list)-1,0,-1):
         for i in range(passnum):
-            if test_list[i]>test_list[i+1]:
+            if test_list[i] > test_list[i+1]:
                 temp = test_list[i]
                 test_list[i] = test_list[i+1]
                 test_list[i+1] = temp
+
 bubble_sort(test_array)
 print(test_array)
