@@ -27,3 +27,5 @@ print(array_length)
 print_repeating(test_array,array_length)
 #missing_number(test_array)
 #thoughts on this section, Really messed up the print repeating call, Make sure the function being called doesn't contain a function in it
+
+
