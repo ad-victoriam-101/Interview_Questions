@@ -21,3 +21,8 @@ def egyptian_fraction(numerator,denominator):
         else:
             print("1/{0}".format(empty_list[i]))
 egyptian_fraction(6,14)
+numer = input("what fraction would you like to see the egyptian fraction for? ")
+denom = input("denomenator also.")
+int(denom)
+int(numer)
+egyptian_fraction(numer,denom)
