@@ -51,6 +51,8 @@ def combine(nodes):
         #then we have to add the 0,1 for later use.
         nodes[pos].append("0")
         nodes[pos+1].append("1")
+        #this starts the poccess of ordering the nodes in order of size. 
+        #then combines them together in binary pathways.
         combined_node1 = (nodes[pos][0]+nodes[pos+1][0])
         combined_node2 = (nodes[pos][1]+nodes[pos+1][1])
         newnode.append(combined_node1)
@@ -59,11 +61,29 @@ def combine(nodes):
         newnodes.append(newnode)
         newnodes = newnodes[2:]
         nodes = newnodes
+        #continues until there is only one node left. 
         huffman_tree.append(nodes)
         combine(nodes)
     return huffman_tree
 
 newnodes = combine(nodes)
+
+################################################################################################################################
 #tree should be inverted to give a aprox visualization of what you might do. 
 huffman_tree.sort(reverse=True)
+print("here is the Huffman Tree, showing mergerd nodes and pathways.")
+#remove the duplicate items in the huffman tree and creates an array checklist with just the nodes and the correct levels. 
+checklist = []
+for level in huffman_tree:
+    for node in level:
+        if node not in checklist:
+            checklist.append(node)
+        else:
+            level.remove(node)
+count = 0
+for level in huffman_tree:
+    print("Level ",count," : ",level)
+    count +=1
+print()
 
+################################################################################################################################
