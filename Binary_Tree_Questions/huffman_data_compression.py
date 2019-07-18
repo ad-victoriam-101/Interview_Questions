@@ -102,6 +102,7 @@ else:
             letter_binary.append(letter_code)
 #ouputs the letters with binary code.
 print("Your binary code is: ")
+#something here is causing it to print everything in the list, It should only print the final node. 
 for letter in letter_binary:
     print(letter[0], letter[1])
 ################################################################################################################################
