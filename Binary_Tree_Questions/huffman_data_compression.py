@@ -59,7 +59,7 @@ def combine(nodes):
         newnode.append(combined_node2)
         newnodes = []
         newnodes.append(newnode)
-        newnodes = newnodes[2:]
+        newnodes = newnodes + nodes[2:]
         nodes = newnodes
         #continues until there is only one node left. 
         huffman_tree.append(nodes)
@@ -87,3 +87,27 @@ for level in huffman_tree:
 print()
 
 ################################################################################################################################
+#build the binary codes for each character - easy cop out is there is only one type of character in the string.
+letter_binary = []
+if len(only_letters)==1:
+    letter_code = [only_letters[0],"0"]
+    letter_binary.append(letter_code*len(input_string))
+else:
+    for letter in only_letters:
+        lettercode = ""
+        for node in checklist:
+            if len(node)>2 and letter in node[1]:
+                lettercode = lettercode + node[2]
+            letter_code = [letter,lettercode]
+            letter_binary.append(letter_code)
+#ouputs the letters with binary code.
+print("Your binary code is: ")
+for letter in letter_binary:
+    print(letter[0], letter[1])
+################################################################################################################################
+#create bistring of the original message using new codes. 
+bitstring = ""
+for character in input_string:
+    for item in letter_binary:
+        if character in item:
+            bitstring = bitstring +item[1]
