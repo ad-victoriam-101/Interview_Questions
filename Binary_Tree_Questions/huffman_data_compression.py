@@ -91,7 +91,7 @@ print()
 letter_binary = []
 if len(only_letters)==1:
     letter_code = [only_letters[0],"0"]
-    letter_binary.append(letter_code*len(input_string))
+    letter_binary.append(letter_code * len(input_string))
 else:
     for letter in only_letters:
         lettercode = ""
@@ -111,3 +111,6 @@ for character in input_string:
     for item in letter_binary:
         if character in item:
             bitstring = bitstring +item[1]
+
+
+# I got to this point and realized there are much easier ways to implement this huffman tree in python. using built in dics
