@@ -117,3 +117,4 @@ for character in input_string:
 
 
 # I got to this point and realized there are much easier ways to implement this huffman tree in python. using built in dics
+binary = ((bin(int(bitstring, base=2))))
