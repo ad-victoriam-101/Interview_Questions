@@ -8,6 +8,7 @@ len_of_str = len(input_string)
 print("Your Message is: " , (input_string))
 print("Your data is " , len_of_str*7 , "bits long")
 #Gathers user input and saves them to arguments. also informs user of how the data looks. uncompressed.
+print("#"*30)
 
 ################################################################################################################################
 
@@ -85,7 +86,7 @@ for level in huffman_tree:
     print("Level ",count," : ",level)
     count +=1
 print()
-
+print("#"*30)
 ################################################################################################################################
 #build the binary codes for each character - easy cop out is there is only one type of character in the string.
 letter_binary = []
@@ -98,8 +99,8 @@ else:
         for node in checklist:
             if len(node)>2 and letter in node[1]:
                 lettercode = lettercode + node[2]
-            letter_code = [letter,lettercode]
-            letter_binary.append(letter_code)
+        letter_code = [letter,lettercode]
+        letter_binary.append(letter_code)
 #ouputs the letters with binary code.
 print("Your binary code is: ")
 #something here is causing it to print everything in the list, It should only print the final node. 
