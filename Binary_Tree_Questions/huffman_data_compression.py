@@ -99,6 +99,7 @@ else:
         for node in checklist:
             if len(node)>2 and letter in node[1]:
                 lettercode = lettercode + node[2]
+        #had an issue for a while about the letters printing every line, Remember python reads white space. make sure your loops don't have extra stuff. 
         letter_code = [letter,lettercode]
         letter_binary.append(letter_code)
 #ouputs the letters with binary code.
