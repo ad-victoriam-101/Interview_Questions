@@ -5,3 +5,17 @@
 #FUNC(array)
 #take each item in the array, compare it to the +1 & -1 if item > x,y add to their count, 
 #else take the +1 as the new number and continue while the array still has numbers to test. 
+def get_segments(arr):
+    #make function that takes an argument
+    asc = arr[1]>arr[0]
+    prev = arr[0]
+    start = 0
+    segments = []
+    for i in num in enumerate(arr[1:]):
+        if (asc and num<prev) or (not asc and num > prev):
+            segments.append((asc,i-start +1))
+            start = i + 1
+            asc = not asc
+        prev = num
+    segments.append((asc , len(arr)-start))
+    return segments
