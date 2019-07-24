@@ -23,7 +23,7 @@ class Node:
         left_height = height(root.left)
         right_height = height(root.right)
 
-        if (abs(left_height-right_height) <= 1) and is_balanced(
+        if (abs(left_height - right_height) <= 1) and is_balanced(
             root.left) is True and is_balanced(root.right) is True:
             return True
         return False
