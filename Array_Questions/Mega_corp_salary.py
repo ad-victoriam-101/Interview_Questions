@@ -12,7 +12,7 @@ def get_segments(arr):
     start = 0
     segments = []
     for i, num in enumerate(arr[1:]):
-        if (asc and num<prev) or (not asc and num > prev):
+        if (asc and num < prev) or (not asc and num > prev):
             segments.append((asc,i-start +1))
             start = i + 1
             asc = not asc
