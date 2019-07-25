@@ -1,0 +1,8 @@
+Machine learning is crazy. 
+Autonomous helicopter, is pretty solid. 
+sense when to use machine learning as well. 
+
+a computer progarma is sait to learn from experience(e) with respect to some task (T) and some preformance measure(P), if its preformance on T, as measured by P, improves with experince. 
+
+Supervised learning VS unsupervised Learning.
+
