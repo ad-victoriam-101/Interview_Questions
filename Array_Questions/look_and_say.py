@@ -86,6 +86,6 @@ def next_number(string):
 
 string = "1"
 num = 6
-for i in range(num):
+for i in range(num-1):
     string = next_number(string)
     print(string)
