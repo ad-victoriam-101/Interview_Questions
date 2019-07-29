@@ -70,14 +70,22 @@ print(countnndSay(N))
 #####################################################################################################
 def next_number(string):
     result = []
+    #empty array to store results
     i = 0 
+    #first count iteration
     while i < len(string):
+        #while i is less than the length of the string.
         count = 1
         while i +1 < len(string) and string[i] == string[i+1]:
+            #while in the bounds of the string, and if the next number is equal to the current one. 
             i += 1
             count += 1
         result.append(str(count)+ string[i])
         i += 1
     return "".join(result)
 
-print(next_number("111221"))
+string = "1"
+num = 6
+for i in range(num):
+    string = next_number(string)
+    print(string)
