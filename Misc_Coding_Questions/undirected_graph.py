@@ -58,17 +58,17 @@ g.addEdge(0, 3)
 g.addEdge(3, 4) 
 
 if g.isCyclic(): 
-	print "Graph contains cycle"
+	print ("Graph contains cycle")
 else : 
-	print "Graph does not contain cycle "
+	print ("Graph does not contain cycle ")
 g1 = Graph(3) 
 g1.addEdge(0,1) 
 g1.addEdge(1,2) 
 
 
 if g1.isCyclic(): 
-	print "Graph contains cycle"
+	print ("Graph contains cycle")
 else : 
-	print "Graph does not contain cycle "
+	print ("Graph does not contain cycle ")
 
 #This code is contributed by Neelam Yadav 
