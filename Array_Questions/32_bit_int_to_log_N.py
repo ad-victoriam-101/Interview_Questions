@@ -13,6 +13,8 @@ def isPowerOfFour(number_test):
     return True
   
 # Driver code 
+#want to update to take user input.
+
 test_no = 8888
 if(isPowerOfFour(64)): 
     print(test_no, 'is a power of 4') 
