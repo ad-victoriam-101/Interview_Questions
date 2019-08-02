@@ -14,7 +14,6 @@ def fibonacci(n):
         #if the input passes all our checks we then can start calculating the sequence. 
 
         temp_fib = fibonacci(n-1)+fibonacci(n-2) 
-        
         FibArray.append(temp_fib) 
         return temp_fib 
   
