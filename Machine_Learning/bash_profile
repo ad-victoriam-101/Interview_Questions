@@ -55,7 +55,7 @@ source ~/.bashrc
 
 #   Set Default Editor (change 'Nano' to the editor of your choice)
 #   ------------------------------------------------------------
-    export EDITOR=/usr/bin/nano
+    export EDITOR=/usr/bin/Nano
 
 #   Set default blocksize for ls, df, du
 #   from this: http://hints.macworld.com/comment.php?mode=view&cid=24491
@@ -63,7 +63,7 @@ source ~/.bashrc
     export BLOCKSIZE=1k
 
 # A more colorful prompt
-# \[\e[0m\] resets the color to default color
+#\[\e[0m\] resets the color to default color
 c_reset='\[\e[0m\]'
 #  \e[0;31m\ sets the color to red
 c_path='\[\e[0;31m\]'
