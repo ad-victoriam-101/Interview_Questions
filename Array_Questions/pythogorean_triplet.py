@@ -18,6 +18,7 @@ def pythogorean_trip(arr):
 
 # pythogorean_trip(test_array)
 def contains_pytrip(arr):
+    #this is a super helpful driver function that preforms alot of under the hood. 
     squared = [x * x for x in arr]
     set_of_squares = set((squared))
     #remember that making a set removes the duplicates in a list. so this will have one of them. 
