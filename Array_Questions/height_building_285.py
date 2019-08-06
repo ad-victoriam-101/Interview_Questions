@@ -3,4 +3,9 @@
 # For example, given the array [3, 7, 8, 3, 6, 1], you should return 3, since the top floors of the buildings with heights 8, 6, and 1 all have an unobstructed view to the west.
 
 # Can you do this using just one forward pass through the array?
+#look at which of the numbers is the highest. then go to the right side and take all buildings that are lower than it. then check that each building is greater than its value to the right. 
+#if a number is larger than the number checked minus the number of buildings that have sun light. 
+def buildings_with_sunlight(arr):
+    for i in range(len(arr)):
+        
 
