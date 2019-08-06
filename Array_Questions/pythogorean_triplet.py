@@ -3,12 +3,37 @@ test_array = [2,3,4,5,6,6,7,8,8,9,10,12,13,5,12,13]
 
 def pythogorean_trip(arr):
     num_squared = [x * x for x in arr]
-    set_of_squares = set(num_squared)
+    set_of_squares = set((num_squared))
+    print (num_squared)
+    print(set_of_squares)
+    
     for i in range(len(num_squared)-1):
         for k in range(i+1,len(num_squared)-1):
             summed = num_squared[i] + num_squared[k]
+            print (summed)
             if summed in set_of_squares:
-                print(i,k,summed,": are triplets.")
+                print("THIS SHOULD WORK")
                 return True
         return False
 
+
+# pythogorean_trip(test_array)
+def contains_pytrip(arr):
+    squared = [x * x for x in arr]
+    set_of_squares = set((squared))
+    print(squared)
+    print(set_of_squares)
+    for i in range(len(squared) - 1):
+        for k in range(i + 1, len(squared) - 1):
+            summed = squared[i] + squared[k]
+            print(summed)
+            if summed in set_of_squares:
+                print("True")
+                return True
+
+    return False
+
+
+# Tests
+contains_pytrip(test_array)
+# pythogorean_trip(test_array)
