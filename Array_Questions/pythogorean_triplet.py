@@ -1,20 +1,19 @@
 #given an array of numbers check if any of them follow the pythogorean code of a^2 + b^2 = c^2
-test_array = [2,3,4,5,6,6,7,8,8,9,10,12,13,5,12,13]
+test_array = [2,6,6,7,8,8,9,10,12,13,5,12,13]
 
 def pythogorean_trip(arr):
-    num_squared = [x * x for x in arr]
-    set_of_squares = set((num_squared))
-    print (num_squared)
+    squared = [x * x for x in arr]
+    set_of_squares = set((squared))
+    print (squared)
     print(set_of_squares)
     
-    for i in range(len(num_squared)-1):
-        for k in range(i+1,len(num_squared)-1):
-            summed = num_squared[i] + num_squared[k]
-            print (summed)
+    for i in range(len(squared) - 1):
+        for k in range(i + 1,len(squared) - 1):
+            summed = squared[i] + squared[k]
+            print(summed,squared[i],squared[k])
             if summed in set_of_squares:
-                print("THIS SHOULD WORK")
                 return True
-        return False
+    return False
 
 
 # pythogorean_trip(test_array)
@@ -26,7 +25,7 @@ def contains_pytrip(arr):
     for i in range(len(squared) - 1):
         for k in range(i + 1, len(squared) - 1):
             summed = squared[i] + squared[k]
-            print(summed)
+            print(summed,squared[i],squared[k])
             if summed in set_of_squares:
                 print("True")
                 return True
@@ -36,4 +35,4 @@ def contains_pytrip(arr):
 
 # Tests
 contains_pytrip(test_array)
-# pythogorean_trip(test_array)
+pythogorean_trip(test_array)
