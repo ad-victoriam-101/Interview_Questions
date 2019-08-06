@@ -20,10 +20,12 @@ def pythogorean_trip(arr):
 def contains_pytrip(arr):
     squared = [x * x for x in arr]
     set_of_squares = set((squared))
+    #remember that making a set removes the duplicates in a list. so this will have one of them. 
     print(squared)
     print(set_of_squares)
     for i in range(len(squared) - 1):
         for k in range(i + 1, len(squared) - 1):
+            #this takes a range though each i adds 1 to it and though the length of the array. 
             summed = squared[i] + squared[k]
             print(summed,squared[i],squared[k])
             if summed in set_of_squares:
