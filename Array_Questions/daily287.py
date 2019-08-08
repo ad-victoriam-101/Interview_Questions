@@ -3,9 +3,12 @@ from heapq import heappush
 
 def get_similarity_score(users_a, users_b):
     union = users_a | users_b
+    #remember that this is a bitwise or
     intersect = users_a & users_b
+    #this is a bitwise and
 
     return len(intersect) / len(union)
+    #returns the division of the two arrays.
 
 
 def get_similar_websites(visits, k=1):
