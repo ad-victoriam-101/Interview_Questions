@@ -12,7 +12,10 @@ def get_similarity_score(users_a, users_b):
 
 
 def get_similar_websites(visits, k=1):
+    #k is the number of pairs, so it will pick the sites that have the most connections. 
+
     website_users = dict()
+    #
     for website, user in visits:
         if website not in website_users:
             website_users[website] = set()
