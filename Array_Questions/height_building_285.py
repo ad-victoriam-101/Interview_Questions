@@ -6,7 +6,7 @@
 #look at which of the numbers is the highest. then go to the right side and take all buildings that are lower than it. then check that each building is greater than its value to the right. 
 #if a number is larger than the number checked minus the number of buildings that have sun light.
 # 
-test_array=[3,7,8,3,6,1] 
+test_array=[3,7,8,3,6,1,9,6,4,1] 
 # remember that 8 is the largest num and the start of what we care about. 
 def buildings_with_sunlight(arr):
     buldings_list = list()
