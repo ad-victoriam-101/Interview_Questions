@@ -35,8 +35,11 @@ def get_similar_websites(visits, k=1):
             web_a, web_b = websites[i], websites[j]
             sim_score = get_similarity_score(website_users[web_a], website_users[web_b])
             heappush(most_similar, (-sim_score, (web_a, web_b)))
+            #remember tha heappush does pretty much what it says
+            #it just inserts an element in a 'heap' while maintaining the heap property.
 
     most_similar = [y for x, y in most_similar]
+    #this changes the order of most_similar, for each item in most_similar. 
 
     return most_similar[:k]
 
