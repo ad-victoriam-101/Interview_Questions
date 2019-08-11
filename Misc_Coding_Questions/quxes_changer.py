@@ -8,3 +8,10 @@
 # ['B', 'R', 'B']           | (R, B) -> G
 # ['B', 'G']                | (B, G) -> R
 # ['R']                     |
+
+sample_input = ['R', 'G', 'B', 'G', 'B']
+
+def quxes_combiner(arr):
+    for quexe in arr:
+        if quexe != arr[quexe+1]:
+            
