@@ -40,9 +40,12 @@ def minimize(quixes):
             continue
 
         new = get_odd_man(quix, stack[-1])
+        #get a new stack for each item that can be converted right away. 
         stack.pop()
         stack.append(new)
         while len(stack) > 1 and stack[-1] != stack[-2]:
+            #this is the meat of the code that checks each value in the new stack and tries to convert it though our get_odd_man() func
+            
             a, b = stack.pop(), stack.pop()
             stack.append(get_odd_man(a, b))
     
