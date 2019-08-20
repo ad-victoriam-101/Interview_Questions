@@ -19,7 +19,6 @@ def count_pairs(arr,n):
 #this is not exactly right, this counts every pair and will count doubles. 
 # print(count_pairs(arr,n))
 print(arr, n)
-count_of_pairs = map(int,raw_input().split())
 
 pairs = 0
 for val in [len(list(group)) for key , group in groupby(sorted(count_of_pairs))]:
