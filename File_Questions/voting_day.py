@@ -10,6 +10,12 @@
 # if voter id == voter_id 
 #     Send a message about fruad with the voteer id, don't count this vote'
 
-f = open("voter_file.txt","r")
-for line in f:
-    print(line)
+try:
+    fl = open("voter_file.txt","r+")
+    for line in fl:
+        votes = line.split(',')
+        # print(voter)
+        print(votes)
+    print(fl.read())
+finally:
+    fl.close()
