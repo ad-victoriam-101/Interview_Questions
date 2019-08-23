@@ -9,3 +9,7 @@
 # sum each time the candidate_id is counted. 
 # if voter id == voter_id 
 #     Send a message about fruad with the voteer id, don't count this vote'
+
+f = open("voter_file.txt","r")
+for line in f:
+    print(line)
