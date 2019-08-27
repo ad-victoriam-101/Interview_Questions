@@ -7,6 +7,8 @@ def cloud_jumper(arr):
     while i < len(arr)-1:
         # if 2 cloud jumps
         if i+2 < len(arr) and arr[i+2] != 1:
+            # print(i)
+            #first checks that the number we're checking is in bounds, and that you can make a double jump, if you can change the i possition to reflect a double jump. 
             i += 1
         jumps += 1
         i += 1
