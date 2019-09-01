@@ -22,6 +22,8 @@ if_odd_weird(33)
 ##############################################################################
 
 check = {True: "Not Weird", False: "Weird"}
+#start off by making a dict that checks nothing. 
+# then call the print on if it returns true or false 
 
 print(check[
         n%2==0 and (
