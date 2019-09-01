@@ -18,3 +18,13 @@ def if_odd_weird(n):
 if_odd_weird(3)
 if_odd_weird(16)
 if_odd_weird(33)
+
+##############################################################################
+
+check = {True: "Not Weird", False: "Weird"}
+
+print(check[
+        n%2==0 and (
+            n in range(2,6) or 
+            n > 20)
+    ])
