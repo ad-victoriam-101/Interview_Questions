@@ -33,4 +33,4 @@ class Solution(object):
         self.h[key] = ans
         return ans
 
-print(Solution.numTilings(10))
+print(Solution.numTilings(1))
