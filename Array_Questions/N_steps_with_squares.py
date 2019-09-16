@@ -7,3 +7,7 @@
 # For example, given 100, you can reach 1 in five steps with the following route: 100 -> 10 -> 9 -> 3 -> 2 -> 1.
 
 def number_jumps_N(num):
+    a = [[0,1],[2,3]]
+    print (a[0][1])
+
+number_jumps_N(5)
