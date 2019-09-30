@@ -23,7 +23,7 @@ def solve(numbers, goal=24, expr=[]):
             a_index = numbers.index(pair[0])
             b_index = numbers.index(pair[1])
             if a_index == b_index:
-                b_index = numbers.index(pair[1], a_index + 1);
+                b_index = numbers.index(pair[1], a_index + 1)
 
             expr_string = convert_expr_to_string(expr[a_index], expr[b_index], expression)
             newlist = numbers[:]
