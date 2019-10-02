@@ -16,3 +16,7 @@
 # [['e', 'a', 'n'],
 #  ['t', 't', 'i'],
 #  ['a', 'r', 'a']]
+givenDictionary = { 'eat', 'rain', 'in', 'rat' }
+givenMatrix = [['e', 'a', 'n'],
+               ['t', 't', 'i'],
+               ['a', 'r', 'a']]
