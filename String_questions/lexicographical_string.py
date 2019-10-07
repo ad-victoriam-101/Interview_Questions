@@ -7,15 +7,19 @@
 
 test_string = "daily"
 
-def lexicographically(str,k):
-    k = int(k)
-    # print(type(k))
-    new_str = list(str[0:k])
-    new_str.sort()
-    start = new_str[0]
+def lexicographically(string,k):
+    if k>1: 
+        return "".join(sorted(string))
+    min_char = min(string)
+    print(min_char)
+    joined = string + string
+    for i,ch in enumerate(joined):
+        if ch == min_char:
+            print( joined[i:i+len(string)])
+
     
-    
 
 
 
-lexicographically(test_string,2)
+# print(lexicographically(test_string,2))
+lexicographically(test_string,1)
