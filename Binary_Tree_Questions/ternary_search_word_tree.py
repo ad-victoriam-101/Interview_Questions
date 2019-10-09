@@ -10,7 +10,7 @@
 # |    / |   | \ 
 # x   b  e   r  e  
 
-parent = ["code","cod","cob","bee","ax","war","we"]
+# parent = ["code","cod","cob","bee","ax","war","we"]
 # print(given_arr)
 
 class TernaryTree:
@@ -42,7 +42,7 @@ class TernaryTree:
             self.char = fch
             self.mid = TernaryTree.add_tree_method(self.mid,rem_word)
         elif self.char == fch:
-            sel.mid = TernaryTree.add_tree_method(self.mid,rem_word)
+            self.mid = TernaryTree.add_tree_method(self.mid,rem_word)
         elif self.char < fch:
             # remember that operators can check alphabetical placement of letters
             # (a>b) will return True.
@@ -56,11 +56,22 @@ class TernaryTree:
         if fch == self.char:
             if not rem_word and not self.mid.char:
                 return True
+            return self.mid.search_word(rem_word)
         elif fch < self.char:
-            if not self.low
+            if not self.low:
                 return False
             return self.low.search_word(word)
         else:
             if not self.rep:
                 return False
             return self.rep.search_word(word)
+tt = TernaryTree()
+tt.add_word("code")
+tt.add_word("cob")
+tt.add_word("be")
+tt.add_word("ax")
+tt.add_word("war")
+tt.add_word("we")
+
+assert tt.search_word("code")
+assert not tt.search_word("cow")
