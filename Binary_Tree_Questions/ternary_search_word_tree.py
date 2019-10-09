@@ -13,39 +13,54 @@
 parent = ["code","cod","cob","bee","ax","war","we"]
 # print(given_arr)
 
-class Node:
-    def __init__(self,key):
-        self.left = None
-        self.right = None
-        self.val = key
-def createNode(parent,i,created,root):
-    if created[i] is not None:
-        return
-    created[i] = Node(i)
-    if parent[i] == -1:
-        root[0] = created[i]
-        return
-    if created[parent[i]] is None:
-        createNode(parent,parent[i])
-    p = created[parent[i]]
-    if p.left is None:
-        p.left = created[i]
-    else:
-        p.right = created[i]
+class TernaryTree:
+    def __init__(self):
+        self.char = None
+        self.low = None
+        self.mid = None
+        self.rep = None
+    def __repr__(self):
+        return "{}->[{}-{}-{}]".format(
+            self.char if self.char else "",
+            self.mid if self.mid else "",
+            self.low if self.low else "",
+            self.rep if self.rep else ""
+        )
+    @staticmethod
+    def add_tree_method(loc,word):
+        if not loc:
+            loc = TernaryTree()
+        loc.add_word(word)
+        return loc
+    def add_word(self,word):
+        if not word:
+            return
+        fch = word[0]
+        # grabs the first letter of the word and assigns the remaining word to a placeholder
+        rem_word = word[1:]
+        if not self.char:
+            self.char = fch
+            self.mid = TernaryTree.add_tree_method(self.mid,rem_word)
+        elif self.char == fch:
+            sel.mid = TernaryTree.add_tree_method(self.mid,rem_word)
+        elif self.char < fch:
+            # remember that operators can check alphabetical placement of letters
+            # (a>b) will return True.
+            self.low = TernaryTree.add_tree_method(self.low,word)
+        else:
+            self.rep = TernaryTree.add_tree_method(self.low,word)
+    def search_word(self,word):
+        fch = word[0]
+        rem_word = word[1:]
 
-def createTree(parent):
-    n = len(parent)
-    created = [None for i in range(n+1)]
-    root = [None]
-    for i in range(n):
-        createNode(parent,i,created,root)
-    return root[0]
-def inorder(root):
-    if root is not None:
-        inorder(root.left)
-        print (root.key)
-        inorder(root.right)
-
-root = createTree(parent)
-
-inorder(root)
+        if fch == self.char:
+            if not rem_word and not self.mid.char:
+                return True
+        elif fch < self.char:
+            if not self.low
+                return False
+            return self.low.search_word(word)
+        else:
+            if not self.rep:
+                return False
+            return self.rep.search_word(word)
