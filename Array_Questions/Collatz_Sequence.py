@@ -10,6 +10,9 @@ def collatz(number):
         print(result)
         return result
 
-n = int(input("Please enter a number"))
-while n != 1:
-    n = collatz(n)
+try: 
+    n = int(input("Please enter a number: "))
+    while n != 1:
+        n = collatz(n)
+except ValueError:
+    print("Value Error enter a bloody number you twat.")
